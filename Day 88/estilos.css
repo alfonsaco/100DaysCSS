@@ -1,0 +1,125 @@
+*{
+    box-sizing: content-box;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*ESTILOS DE LOS CONTENEDORES*/
+main{
+    width: 500px;   
+    height: 500px;
+    background-color: #2C3E50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*ESTILOS DE LA VELA*/
+.cuerda{
+    background-color: rgb(187, 135, 119);
+    width: 4px;
+    height: 8px;
+    z-index: 1;
+}
+.fondo-vela{
+    background-color: #E0E5ff;
+    width: 70px;
+    height: 120px;
+    border-radius: 5px;
+}
+.vela-blanca{
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+}
+.plato{
+    background-color: #1B233E;
+    width: 150px;
+    height: 10px;
+    border-radius: 3px;
+}
+
+/*ESTILOS DEL FUEGO*/
+.fuego{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.bola-pequeña{
+    background-color: orange;
+    width: 5px;
+    height: 10px;
+    margin-bottom: -8px;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 10px orange) drop-shadow(0px 0px 5px yellow);
+    animation: movimiento 5s ease-in-out infinite reverse;
+}
+.bola-media{
+    background-color: orange;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: -7px;
+    filter: drop-shadow(0px 0px 10px orange);
+    animation: horizontl 1.5s ease-in-out infinite alternate-reverse;
+}
+.bola-grande{
+    background-color: orange;
+    width: 13px;
+    height: 15px;
+    border-radius: 50%;
+    margin-bottom: -2px;
+    z-index: 10;
+    filter: drop-shadow(0px 0px 10px orange);
+    animation: alargar 2s ease-in-out infinite alternate-reverse;
+}
+@keyframes movimiento {
+    from{
+        transform: translateX(2px) translateY(1px);
+    }
+    25%{
+        transform: translateX(2px) translateY(-1px);
+    }
+    50%{
+        transform: translateX(-2px) translateY(-1px);
+    }
+    75%{
+        transform: translateX(-2px) translateY(1px);
+    }
+    to{
+        transform: translateX(2px) translateY(1px);
+    }
+}
+@keyframes horizontl {
+    from{
+        transform: translateX(1px);
+    }
+    to{
+        transform: translateX(-1px);
+    }
+}
+@keyframes alargar {
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(1.1);
+    }
+}

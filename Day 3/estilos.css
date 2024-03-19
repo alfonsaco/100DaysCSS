@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(97, 97, 97);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #272C34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: bisque;
+    clip-path: fill-box;
+    animation: desvanecer 5s ease infinite;
+}
+@keyframes desvanecer {
+    from, 85%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+/*FONDO*/
+.cielo{
+    width: 100%;
+    height: 65%;
+    background-color: #7DDFFC;
+}
+.arena{
+    background-color: #F0DE75;
+    width: 100%;
+    height: 35%;    
+}
+
+/*PIRÁMIDE*/
+.piramide{
+    background-color: #a5a5a5;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    bottom: 189.5px;
+    transform: translateX(34%);
+    clip-path: polygon(50% 46%, 0% 100%, 100% 100%);
+    animation: derecha 5s ease infinite;
+}
+.sombra{
+    clip-path: polygon(50% 46%, 0% 100%, 68% 100%);
+    background-color: #ffffff;
+    width: 120px;
+    height: 120px;
+    animation: izquierda 5s ease infinite;
+}
+@keyframes derecha {
+    from{
+        background-color: #a5a5a5;
+    }
+    80%,60%{
+        background-color: #c7c7c7;
+    }
+    to{
+        background-color: #fff;
+    }
+}
+@keyframes izquierda {
+    from{
+        background-color: #ffffff;
+    }
+    80%, to{
+        background-color: #c7c7c7;
+    } 
+}
+
+/*SOL*/
+.sol{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(224, 255, 46);
+    position: relative;
+    bottom: 290px;
+}
+.animacion-sol{
+    animation: sol 5s ease infinite;
+}
+@keyframes sol {
+    0% {
+          background: #F57209;
+         transform: rotate(-70deg);
+    }
+    100% {
+          background: #F57209;
+      transform: rotate(70deg);
+    }
+  }
+  
