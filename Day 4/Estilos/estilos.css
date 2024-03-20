@@ -1,0 +1,86 @@
+/*ESTILOS PARA EL BODY*/
+body{
+    background-color: rgb(39, 39, 39);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*ESTILOS GENERALES PARA TODOS LOS DIV, YA QUE TODOS TENDRÁN UN DISPLAY FLEX*/
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*ESTILOS PARA EL CONTENEDOR QUE CONTIENE LOS CÍRCULOS*/
+.container{
+    background-color: #E56262;
+    border-radius: 7px;
+    width: 500px;
+    height: 500px;
+}
+
+/*ESTILOS PARA LOS CIRCULOS*/
+.grande{
+    background-color: #fff;
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    z-index: 1;
+    animation: bola-grande 8s infinite ease-in-out;
+}
+.medio{
+    background-color: #fff;
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    z-index: 2;
+    animation: bola-media 8s infinite ease-in-out;
+}
+.chico{
+    background-color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    z-index: 3;
+    animation: bola-peq 8s infinite ease-in-out;
+}
+
+@keyframes bola-grande {
+    from, 10%{
+        scale: 0;
+    }
+    30%, 70%{
+        scale: 1;
+    }
+    to{
+        scale: 0;
+    }
+}
+@keyframes bola-media {
+    from, 20%{
+        scale: 0;
+    }
+    35%, 75% {
+        scale: 1;
+    }
+    90%, 100%{
+        scale: 0;
+    }
+}
+@keyframes bola-peq {
+    from, 30%{
+        scale: 0;
+    }
+    40%, 60%{
+        scale: 1;
+    }
+    80%, 100%{
+        scale: 0;
+    }
+}
