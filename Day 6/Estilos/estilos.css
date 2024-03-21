@@ -1,0 +1,145 @@
+body{
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #786450;
+    font-family: sans-serif;
+}
+
+/*ESTILOS DEL MAIN QUE CONTIENE EL FONDO NARANJA*/
+main{
+    background: linear-gradient(60deg, #f5a952, #C66B34);
+    border-radius: 5px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ESTILOS DEL CONTENEDOR*/
+.container{
+    width: 400px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 8px 8px 15px rgba(0,0,0,0.4);
+}
+
+/*ESTILOS DE LA SECCIÓN DE LA IZQUIERDA*/
+.perfil{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.perfil p{
+    margin: 0;
+}
+/*Estilos para la imagen*/
+.div-imagen{
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    transition-duration: 1s;
+}
+.circulo1{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: #786450 solid 1px;
+    border-left: transparent solid 1px;
+    transition-duration: 1s;
+}
+.div-imagen:hover .circulo1{
+    transform: rotate(360deg);
+}
+.circulo2{
+    width: 86px;
+    height: 86px;
+    border-radius: 100%;
+    border: #786450 solid 1px;
+    border-right: transparent solid 1px;
+    position: relative;
+    bottom: 165px;
+    left: -3px;
+    transition-duration: 1s;
+}
+.circulo2:hover{
+    transform: rotate(-360deg);
+}
+.div-imagen img{
+    background-image: url(../Imágenes/WalterWhite.png);
+    background-size: cover;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 78.6px;
+    left: 3.4px;
+}
+
+/*Estilos para el nombre*/
+.div-nombre{
+    text-align: center;
+    margin-top: 20px;
+}
+.div-nombre h2{
+    margin: 0;
+    font-size: 1em;
+}
+.div-nombre p{
+    font-size: 0.8em;
+}
+/*Estilos para el Follow y Message*/
+.div-opciones{
+    text-align: center;
+    margin-top: 25px;
+}
+.div-opciones p{
+    border: solid 1px #786450;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 20px;
+    padding: 6px 30px;
+    margin: 10px 0;
+    transition-duration: 0.5s;
+}
+.div-opciones p:hover{
+    background-color: #786450;
+    color: #fff;
+}
+
+
+/*ESTILOS DE LAS SECCIÓN DE LA DERECHA*/
+.stats{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.stats div{
+    background-color: #F5E8DF;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 1s;
+}
+.stats div:hover{
+    background-color: #d3baa8;
+}
+.stats p{
+    margin: 0;
+    font-size: 0.8em;
+}
+.stats h1{
+    margin: 0;
+    font-size: 1.3em;
+}
