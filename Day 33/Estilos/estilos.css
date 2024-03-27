@@ -1,0 +1,166 @@
+body{
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*ESTILOS PARA EL FONDO DE CIELO*/
+main{
+    background-color: #75C1E8;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;overflow: hidden;
+}
+
+/*ESTILOS PARA EL SOL*/
+.sol{
+    background-color: #FFD93C;
+    border-radius: 100%;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: 40px;
+    left: 55px;
+}
+
+/*ESTILOS GENERALES PARA TODAS LAS NUVES*/
+[class^=nube]{
+    position: relative;
+}
+
+/*NUBE PEQUEÑA*/
+.nube-1{
+    left: 200px;
+    top: -46px;
+    animation: nube1 60s infinite alternate;
+}
+    .nube-1-1{
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        top: 57px;
+        left: 18px;
+        background-color: #fff;
+    }
+    .nube-1-2{
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        top: 30px;
+        left: 37px;
+        background-color: #fff;
+    }
+    .nube-1-3{
+        width: 35px;
+        height: 15px;
+        border-radius: 30px;
+        top: 10px;
+        left: 10px;
+        background-color: #fff;
+    }
+    .nube-1-4{
+        width: 70px;
+        height: 17px;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+@keyframes nube1 {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-200px);
+    }
+}
+
+/*NUBE MEDIANA*/
+.nube-2{
+    left: 40px;
+    top: -170px;
+    animation: nube2 60s infinite alternate;
+}
+    .nube-2-1{
+        width: 55px;
+        height: 55px;
+        border-radius: 100%;
+        top: 100px;
+        left: 27px;
+        background-color: #fff;
+    }
+    .nube-2-2{
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        top: 50px;
+        left: 55px;
+        background-color: #fff;
+    }
+    .nube-2-3{
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        top: 17px;
+        left: 12px;
+        background-color: #fff;
+    }
+    .nube-2-4{
+        width: 125px;
+        height: 30px;
+        border-radius: 40px;
+        background-color: #fff;
+    }
+@keyframes nube2 {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-250px);
+    }
+}
+
+/*NUBE GRANDE*/
+.nube-3{
+    bottom: 245px;
+    left: 320px;
+    animation: nube3 60s infinite alternate;
+}
+    .nube-3-1{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        top: 50px;
+        left: 22px;
+        background-color: #fff;
+    }
+    .nube-3-2{
+        width: 120px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: #fff;
+    }
+    .nube-3-3{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        bottom: 40px;
+        right: 20px;
+        background-color: #fff;
+    }
+    .nube-3-4{
+        width: 180px;
+        height: 30px;
+        border-radius: 40px;
+        top: -60px;
+        right: 55px;
+        background-color: #fff;
+    }
+@keyframes nube3 {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-450px);
+    }
+}
