@@ -1,0 +1,198 @@
+/*ESTILOS DEL BODY*/
+body{
+    background-color: rgb(27, 27, 27);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ESTILOS DEL MAIN PARA EL COLOR DE FONDO*/
+main{
+    background-color: #42A7A1;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
+/*ESTILOS DEL CONTENEDOR QUE CONTIENE EL CALENDARIO*/
+.container{
+    width: 300px;
+    height: 230px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 5px;
+    overflow: hidden; /*Para que .naranja y .blanco tengan el borde redondeado del container*/
+    box-shadow: 8px 8px 15px rgba(0,0,0,0.3);
+}
+
+/*PARTE NARANJA DEL CALENDARIO*/
+.naranja{
+    background-color: #F1BA64;
+    color: #fff;
+    display: flex;
+    height: 15%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 15px 15px 18px 15px;
+}
+/*Estilos para el texto de la parte naranja del calendario*/
+.naranja h1{
+    font-size: 0.95em;
+    margin: 3px 0;   
+}
+.naranja p{
+    margin: 3px 0;
+    font-size: 0.75em;
+}
+.naranja p:first-child{
+    text-align: right;
+}
+/*FIN DE LOS ESTILOS DE LA PARTE NARANJA*/
+
+
+/*PARTE BLANCA DEL CALENDARIO*/
+.blanco{
+    background-color: #fff;
+    height: 85%;
+    padding: 0px 10px 10px 10px;
+}
+.blanco > div{
+    display: flex;
+    align-items: center;
+}
+
+/*Estilos del "View" y "Purchases"*/
+.blanco-guia{
+    color: #525252;
+    font-size: 0.7em;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: right;
+    border-bottom: solid 1px #e4e4e4;
+    height: 40px;
+}
+.blanco-guia div:first-of-type{
+    background-color: #FA7373;
+    height: 3px;
+    width: 10px;
+    border-radius: 10px;
+}
+.blanco-guia div:last-of-type{
+    background-color: #7BA2FF;
+    height: 3px;
+    width: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.blanco-guia p{
+    margin-left: 8px;
+}
+
+/*Estilos de la gráfica de color rojo*/
+.grafica-roja{
+    height: 40px;
+    justify-content: center;
+}
+.grafica-roja > div{
+    display: flex;
+    gap: 36px;
+}
+.grafica-roja div div{
+    width: 5px;
+    height: 5px;
+    background-color: #FA7373;
+    border-radius: 100%;
+    position: relative;
+}
+/*Cambiamos la posición de cada uno de los puntos de la gráfica*/
+    .grafica-roja div div:first-child{
+        top: 27px;
+    }
+    .grafica-roja div div:nth-child(2){
+        top: -8px;
+        left: 1px;
+    }
+    .grafica-roja div div:nth-child(3){
+        top: 2px;
+    }
+    .grafica-roja div div:nth-child(4){
+        top: -9px;
+    }
+    .grafica-roja div div:nth-child(5){
+        top: 17px;
+    }
+    .grafica-roja div div:nth-child(6){
+        top: 27px;
+    }
+    .grafica-roja div div:last-child{
+        top: -3px;
+    }
+/*Fin del cambio de posición de los nodos*/
+polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+.roja{
+    stroke: #FA7373;
+}
+svg{
+    position: absolute;
+	top: 243px; /*Pondremos esto para que no ocupe espacio dentro del gráfico, ya que el div del svg ocupa*/
+	left: 120px;
+	right: 0;
+	bottom: 0;
+}
+
+/*Estilos de la gráfica de color azul*/
+.grafica-azul{
+    border-top: solid 1px #e4e4e4;
+    justify-content: center;
+    height: 40px;
+}
+.grafica-azul > div{
+    display: flex;
+    gap: 36px;
+}
+.grafica-azul div div{
+    width: 5px;
+    height: 5px;
+    background-color: #7BA2FF;
+    border-radius: 100%;
+    position: relative;
+}
+/*Cambiamos la posición de cada uno de los puntos de la gráfica azul*/
+    .grafica-azul div div:nth-child(2){
+        bottom: 11px;
+    }
+    .grafica-azul div div:nth-child(3){
+        top: 3px;
+    }
+    .grafica-azul div div:nth-child(4){
+        bottom: 6px;
+    }
+    .grafica-azul div div:nth-child(6){
+        top: 12px;
+    }
+    .grafica-azul div div:last-child{
+        top: 2px;
+    }
+/*Fin del posicionamiento de los nodos azules*/
+.azul{
+    stroke: #7BA2FF;
+}
+
+/*Días de la semana*/
+.blanco-dias{
+    border-top: solid 1px #e4e4e4;
+    color: #999999;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 0.7em;
+}
