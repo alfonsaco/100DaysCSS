@@ -1,0 +1,89 @@
+body{
+    background-color: #c9c9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFF;
+    font-family: sans-serif;
+}
+
+main{
+    width: 400px;
+    height: 400px;
+    background-color: #E67E22;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+/*DIVS*/
+div{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+div:nth-child(even){
+    background-color: #E67E22;
+}
+div:nth-child(odd){
+    background-color: #34495E;
+}
+
+/*ESTILOS PARA EL HOVER DEL DIV*/
+div:hover{
+    width: 120%;
+}
+
+/*ESTILOS PARA LOS TEXTOS*/
+.uno::after{
+    content: 'FIRST';
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 100ms;
+    font-weight: bold;
+}
+.uno:hover::after{
+    opacity: 1;
+    scale: 1.7;
+}
+
+.dos::after{
+    content: 'SECOND';
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 100ms;
+    font-weight: bold;
+}
+.dos:hover::after{
+    opacity: 1;
+    scale: 1.7;
+}
+
+.tres::after{
+    content: 'THIRD';
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 100ms;
+    font-weight: bold;
+}
+.tres:hover::after{
+    opacity: 1;
+    scale: 1.7;
+}
+
+.cuatro::after{
+    content: 'FOURTH';
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 100ms;
+    font-weight: bold;
+}
+.cuatro:hover::after{
+    opacity: 1;
+    scale: 1.7;
+}
