@@ -1,0 +1,117 @@
+body{
+    background-color: rgb(29, 29, 29);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/*Frame*/
+main{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: #4C4BA2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*Animación y estilos para los puntos*/
+div{
+    background-color: #fff;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    animation: mover 0.5s ease-in-out infinite alternate;
+    transform: translateX(50px);
+}
+@keyframes mover {
+    from{
+        transform: translateX(50px);
+    }
+    to{
+        transform: translateX(-50px);
+    }
+}
+
+/*Duración y delay para cada punto*/
+div:nth-child(2){
+    animation-delay: 20ms;
+    animation-duration: 505ms;
+}
+div:nth-child(3){
+    animation-delay: 40ms;
+    animation-duration: 510ms;
+}
+div:nth-child(4){
+    animation-delay: 60ms;
+    animation-duration: 515ms;
+}
+div:nth-child(5){
+    animation-delay: 80ms;
+    animation-duration: 520ms;
+}
+div:nth-child(6){
+    animation-delay: 100ms;
+    animation-duration: 525ms;
+}
+div:nth-child(7){
+    animation-delay: 120ms;
+    animation-duration: 530ms;
+}
+div:nth-child(8){
+    animation-delay: 140ms;
+    animation-duration: 535ms;
+}
+div:nth-child(9){
+    animation-delay: 160ms;
+    animation-duration: 540ms;
+}
+div:nth-child(10){
+    animation-delay: 180ms;
+    animation-duration: 545ms;
+}
+div:nth-child(11){
+    animation-delay: 200ms;
+    animation-duration: 550ms;
+}
+div:nth-child(12){
+    animation-delay: 220ms;
+    animation-duration: 555ms;
+}
+div:nth-child(13){
+    animation-delay: 240ms;
+    animation-duration: 560ms;
+}
+div:nth-child(14){
+    animation-delay: 260ms;
+    animation-duration: 565ms;
+}
+div:nth-child(15){
+    animation-delay: 280ms;
+    animation-duration: 570ms;
+}
+div:nth-child(16){
+    animation-delay: 300ms;
+    animation-duration: 575ms;
+}
+div:nth-child(17){
+    animation-delay: 320ms;
+    animation-duration: 580ms;
+}
+div:nth-child(18){
+    animation-delay: 340ms;
+    animation-duration: 585ms;
+}
+div:nth-child(19){
+    animation-delay: 360ms;
+    animation-duration: 590ms;
+}
+div:nth-child(20){
+    animation-delay: 380ms;
+    animation-duration: 595ms;
+}
