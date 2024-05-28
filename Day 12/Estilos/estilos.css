@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,300italic);
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Open Sans';
+}
+main{
+    width: 400px;
+    height: 400px;
+    background-color: #4CB6DE;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 30px;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*COMILLAS*/
+.fa-quote-left{
+    transform: rotateX(180deg) rotateY(180deg);
+    color: #6AC2E3;
+    font-size:6em;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 15px;
+}
+
+
+/*TEXTO*/
+p{
+    margin: 0;
+}
+.texto{
+    line-height: 35px;
+    font-size: 1.5em;
+}
+.parrafo{
+    position: relative;
+    z-index: 5;
+    top: 55px;
+}
+.autor{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+.aparecer-mensaje{
+    background-color: #286F8A;
+    padding: 0px 10px 5px 10px;
+}       
+
+
+/*DEFINICIÓN*/
+.definicion{
+    background-color: #286F8A;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    right: -80px;
+    bottom: 52px;
+    font-size: 1em;
+    line-height: normal;
+    display: none;
+}
+.negrita{
+    font-weight: bold;
+}
+/*Sección en blanco*/
+.definicion-blanco{
+    background-color: #fff;
+    height: 25%;
+    color: #286F8A;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 8px;
+}
+.fa-volume-up{
+    font-size: 0.85em;
+    position: relative;
+    top: 2px;
+}
+/*Sección azul*/
+.definicion-azul{
+    height: 75%;
+    width: 100%;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+/*Flechita*/
+.definicion-rombo{
+    background-color: #286F8A;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    position: relative;
+    top: -8px;
+    left: 48%;
+}
+
+/*PULSADOR PARA EL HOVER*/
+.pulsar{
+    background-color: rgba(255, 70, 70, 0);
+    width: 132px;
+    height: 40px;
+    position: absolute;
+    top: 70px;
+    z-index: 10;
+    left: 108px;
+    cursor: pointer;
+}
+.pulsar:hover .definicion{
+    display: block;
+    animation: moverHover 0.7s;
+}
+
+@keyframes moverHover {
+    from{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
