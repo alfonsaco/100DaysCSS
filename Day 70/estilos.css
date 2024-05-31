@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #512626;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+}
+
+/*ESTILOS PARA LOS CUADRADOS*/
+main > div {
+    background-color: #E27474;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease;
+    user-select: none;
+    cursor: pointer;
+}
+main > div:hover {
+    scale: 0.95;
+    /*Ponemos la sombra interior con el inset*/
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.3);
+}
+
+main > div > p {
+    font-size: 1.1em;
+}
+main > div > h1 {
+    font-size: 3.5em;
+}
