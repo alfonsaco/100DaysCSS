@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #181818;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*ESTILOS DEL FRAME INICIAL*/
+main{
+    width: 400px;
+    height: 400px;
+    background-color: #E9EDEF;
+    border-radius: 5px;
+    padding: 30px 0 0 0;
+}
+
+
+/*ESTILOS PARA LA PRIMERA SECCIÓN DE LOS PLANES*/
+.planes{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+/*Selector para cada ficha*/
+.planes > div{
+    width: 110px;
+    height: 160px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+/*Para quitarle el margen a todos los elementos que estén dentro de .planes*/
+.planes *{
+    margin: 0;
+}
+.azul{
+    background-color: #7DD0ED;
+    height: 22%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    transition-duration: 0.5s;
+}
+.blanco{
+    background-color: #fff;
+    height: 78%;
+    color: #5E5E5E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+.blanco h1{
+    font-size: 1.7em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.5s;
+}
+.blanco p{
+    font-size: 0.8em;
+    position: relative;
+    bottom: 4px;
+    transition-duration: 0.5s;
+}
+/*HOVERS*/
+.planes > div:hover .azul {
+    background-color: #27A6D2;
+}
+.planes > div:hover p,
+.planes > div:hover h1{
+    color: #27A6D2;
+}
+.planes > div:hover{
+    scale: 1.1;
+}
+/*Líneas grises dentro de cada plan*/
+.linea-gris{
+    background-color: #E4E4E4;
+    height: 3px;
+    margin: 3px;
+    align-self: center;
+}
+.linea-gris:first-of-type{
+    width: 70px;
+}
+.linea-gris:nth-of-type(2){
+    width: 65px;
+}
+.linea-gris:nth-of-type(3){
+    width: 68px;
+}
+.linea-gris:last-of-type{
+    width: 57px;
+}
+.lineas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+
+/*ESTILOS PARA LA PARTE DE LAS GRÁFICAS*/
+.graficas{
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    max-width: 380px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+    top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.graficas > div{
+    width: 90%;
+    position: relative;
+    bottom: 8px;
+}
+.grafica-gris{
+    background-color: #E9EDEF;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*Div del texto*/
+.texto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto p{
+    margin: 15px 0 5px 0;
+    color: #5E5E5E;
+    font-size: 0.8em;
+}
+
+/*ESTILOS PARA LAS LÍNEAS AZULES*/
+.fill {
+    background-color: #7DD0ED;
+    height: 100%;
+    width: 0%;
+    transition: 0.5s ease;
+    border-radius: 3px;
+}
