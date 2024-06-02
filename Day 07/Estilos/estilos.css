@@ -1,0 +1,227 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color:  #264057;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+}
+main > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*ESTILOS PARA LA FICHA QUE ESTÁ POR ENCIMA*/
+.ficha-superior {
+    width: 300px;
+    height: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: 0.6s ease-in-out;
+}
+/*Parte de arriba*/
+.header {
+    background-color: #5F98CD;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+.header p {
+    color: #fff;
+}
+.fa-search {
+    color: #B2DAFF;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.3s ease;
+} 
+.boton {
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+.boton div {
+    height: 3px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+.boton-arriba {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.boton-raya-corta {
+    width: 20px;
+    background-color: #B2DAFF;
+}
+.boton-bola {
+    width: 7px;
+    height: 7px !important;
+    border-radius: 100% !important;
+    background-color: #B2DAFF;
+}
+.boton-raya-larga {
+    width: 30px;
+    background-color: #B2DAFF;
+}
+.fa-search:hover {
+    color: #fff;
+}
+.boton:hover .boton-bola, .boton:hover .boton-raya-corta, .boton:hover .boton-raya-larga {
+    background-color: #fff;
+}
+[type="search"] {
+    position: absolute;
+    border: 0;
+    height: 35px;
+    width: 225px;
+    color: #666666;
+    border-radius: 20px;
+    padding-left: 20px;
+    left: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+[type="search"]:focus {
+    outline: 0;
+}
+/*Usaremos esto para eliminar el botón X del input*/
+[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+}
+.mover-buscador {
+    left: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Parte de abajo*/
+.main {
+    background-color: #fff;
+    width: 100%;
+    height: 80%;
+    color: #666666;
+    padding: 0px 20px 0 45px;
+}
+.raya {
+    height: 100%;
+    width: 4px;
+    background-color: #EBEBEB;
+    position: absolute;
+    left: 30px;
+}
+/*Textos*/
+.circulo {
+    border-radius: 100%;
+    border: 2px solid #5F98CD;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: -19px;
+    background-color: #fff;
+    outline: #fff solid 3px;
+}
+.negrita {
+    font-weight: bold;
+}
+.main > div:not(.raya) {
+    padding: 12px 0px;
+    cursor: pointer;
+    opacity: 0;
+}
+/*Animaciones para cada texto*/
+.main > div:not(.raya):nth-child(2) {
+    padding-top: 25px;
+    animation: moverTextos 1s ease forwards;
+}
+.main > div:not(.raya):nth-child(3) {
+    animation: moverTextos 1s ease 200ms forwards;
+}
+.main > div:not(.raya):nth-child(4) {
+    animation: moverTextos 1s ease 400ms forwards;
+}
+@keyframes moverTextos {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.main > div:not(.raya) p:first-of-type {
+    font-size: 0.75em;
+}
+.main > div:not(.raya) p:last-child {
+    font-size: 0.95em;    
+}
+.main > div:not(.raya):hover p {
+    color: #5F98CD;
+}
+
+/*ESTILOS PARA LA FICHA QUE ESTÁ POR DEBAJO*/
+.ficha-posterior {
+    background-color: #43627D;
+    height: 270px;
+    width: 150px;
+    border-radius: 3px;
+    padding: 10px 0;
+    color: #93B2CD;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    transition: 0.6s ease-in-out;
+}
+.ficha-posterior > div {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.ficha-posterior i {
+    margin: 0 10px 0 15px;
+    font-size: 0.9em;
+}
+.ficha-posterior > div:hover {
+    background-color: #385269;
+    color: #fff;
+}
+
+/*Animación al pulsar el botón*/
+.mover-ficha-posterior {
+    transform: translateX(-70px);
+}
+.mover-ficha-superior {
+    transform: translateX(0px);
+}
