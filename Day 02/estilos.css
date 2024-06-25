@@ -1,0 +1,100 @@
+/*ESTILOS GENERALES*/
+body {
+    height: 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#boton, main, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: #3FAF82;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+}
+
+/*ESTILOS PARA EL BOTÓN*/
+#boton {
+    flex-direction: column;
+    gap: 13px;
+    cursor: pointer;
+}
+#boton div {
+    height: 8px;
+    width: 80px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.4);
+}
+
+/*ANIMACIONES DE LAS RAYAS*/
+#raya-medio {
+    transition: 0.5s ease;
+}
+.animacion-medio {
+    scale: 0.6;
+    opacity: 0;
+}
+.animacion-extremo-arriba {
+    animation: animacionBoton 1s ease forwards alternate;
+}
+.animacion-extremo-abajo {
+    animation: animacionBotonAbajo 1s ease forwards alternate;
+}
+@keyframes animacionBoton {
+    from {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(21px);
+    }
+    to {
+        transform: rotate(45deg) translateY(15px) translateX(15px);
+    }
+}
+@keyframes animacionBotonAbajo {
+    from {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-21px);
+    }
+    to {
+        transform: rotate(-45deg) translateY(-15px) translateX(15px);
+    }
+}
+
+/* Animaciones invertidas */
+.animacion-extremo-arriba-invertida {
+    animation: animacionBotonInvertida 1s ease forwards;
+}
+.animacion-extremo-abajo-invertida {
+    animation: animacionBotonAbajoInvertida 1s ease forwards;
+}
+@keyframes animacionBotonInvertida {
+    from {
+        transform: rotate(45deg) translateY(15px) translateX(15px);
+    }
+    50% {
+        transform: translateY(21px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes animacionBotonAbajoInvertida {
+    from {
+        transform: rotate(-45deg) translateY(-15px) translateX(15px);
+    }
+    50% {
+        transform: translateY(-21px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
