@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd;
+}
+main {
+    width: 400px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+
+/* ESTILOS PARA EL DIV DE LAS FOTOS */
+.fotos {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 4px;
+    z-index: 5;
+}
+.fotos > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.fotos > div > div {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease 100ms;
+    z-index: 1;
+}
+/* Fotos para cada div */
+.fotos > div:first-child div {
+    background-image: url(Imágenes/2Pac.jpg);
+    background-size: cover;
+}
+.fotos > div:nth-child(2) div {
+    background-image: url(Imágenes/Biggie\ Smalls.png);
+    background-size: cover;
+}
+.fotos > div:nth-child(3) div {
+    background-image: url(Imágenes/Rae\ Ghost.jpg);
+    background-size: cover;
+    background-position-x: -20px;
+}
+.fotos > div:last-child div {
+    background-image: url(Imágenes/Eazy\ E.jpg);
+    background-size: cover;
+    background-position-x: -80px;
+}
+/* Opción de + */
+.fotos > div::before {
+    content: '+';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: #fff;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-color: #EC6565;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 100;
+    position: absolute;
+    scale: 2;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+/* Animación */
+.fotos > div:hover > div {
+    filter: brightness(0.5);
+}
+.fotos > div:hover::before {
+    visibility: visible;
+    scale: 1;
+    opacity: 1;
+}
+
+
+/* ESTILOS PARA LA PARTE DESPLEGLABLE */
+.div-desplegable {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    visibility: hidden;
+}
+/* Parte de arriba */
+.fondo {
+    height: 40%;
+    width: 100%;
+    background-image: url(Imágenes/Underground.jpg);
+    background-size: cover;
+    transform: translateY(-170px);
+    transition: 1s ease;
+    transition-delay: 300ms;
+}
+.fondo.animacion-fondo {
+    transform: translateY(0px);
+    transition-delay: 0s;
+}
+/* Parte de abajo */
+.objetos {
+    height: 60%;
+    width: 100%;
+    background-color: #EC6565;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    transition: 1s ease;
+    transform: translateY(250px);
+    transition-delay: 300ms;
+}
+.objetos > div {
+    display: flex;
+    gap: 50px;
+}
+.objetos > div > i {
+    border: 1px solid #fff;
+    font-size: 1.15em;
+    padding: 10px;
+    border-radius: 100%;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.objetos > div > i:hover {
+    background-color: #fff;
+    color: #EC6565;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+}
+.objetos.animacion-objetos {
+    transform: translateY(0px);
+    transition-delay: 0s;
+}
+/* Imagen central */
+.imagen {
+    background-color: #fff;
+    background-image: url(Imágenes/Biggie\ Smalls.png);
+    background-size: cover;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    position: absolute;
+    z-index: 150;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-350px);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transition: 1s ease;
+}
+.imagen.animacion-imagen {
+    transform: translateX(-50%) translateY(-90px);
+    transition-delay: 300ms;
+}
+/* Botón cerrar pestaña */
+#boton-exit {
+    height: 50px;
+    width: 50px;
+    background-color: #EC6565;
+    color: #fff;
+    font-size: 2em;
+    font-family: sans-serif;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 1s ease;
+    transform: translateY(-100px);
+    visibility: visible;
+}
+#boton-exit:hover {
+    background-color: #fff;
+    color: #EC6565;
+}
+#boton-exit.animacion-boton {
+    transform: translateY(0px);
+    transition-delay: 400ms;
+}
