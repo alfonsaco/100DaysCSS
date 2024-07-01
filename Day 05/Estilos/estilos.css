@@ -144,8 +144,8 @@ polyline {
 }
 svg{
     position: absolute;
-	top: 243px; /*Pondremos esto para que no ocupe espacio dentro del gráfico, ya que el div del svg ocupa*/
-	left: 120px;
+	top: 193px; /*Pondremos esto para que no ocupe espacio dentro del gráfico, ya que el div del svg ocupa*/
+	left: 71px;
 	right: 0;
 	bottom: 0;
 }
