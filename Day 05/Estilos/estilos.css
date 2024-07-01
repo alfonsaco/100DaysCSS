@@ -11,8 +11,8 @@ body{
 /*ESTILOS DEL MAIN PARA EL COLOR DE FONDO*/
 main{
     background-color: #42A7A1;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;

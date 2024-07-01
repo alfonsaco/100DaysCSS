@@ -12,10 +12,11 @@ body{
 
 /*ESTILOS DE LOS CONTENEDORES*/
 main{
-    width: 500px;   
-    height: 500px;
+    width: 400px;   
+    height: 400px;
     background-color: #2C3E50;
     display: flex;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }

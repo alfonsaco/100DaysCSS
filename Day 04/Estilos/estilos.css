@@ -17,9 +17,9 @@ div{
 /*ESTILOS PARA EL CONTENEDOR QUE CONTIENE LOS CÍRCULOS*/
 .container{
     background-color: #E56262;
-    border-radius: 7px;
-    width: 500px;
-    height: 500px;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
 }
 
 /*ESTILOS PARA LOS CIRCULOS*/
