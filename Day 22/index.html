@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <title>Day 22</title>
+   <!-- <style>
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        svg {
+            width: 300px;
+            height: 300px;
+        }
+
+        .circle {
+            fill: none;
+            stroke: rgb(34, 34, 34);
+            stroke-width: 20;
+            stroke-linecap: round; /* Bordes redondeados */
+            stroke-dasharray: 942; /* 2 * π * r (donde r = 150 - stroke-width / 2) */
+            stroke-dashoffset: 471; /* Inicialmente medio círculo */
+            animation: draw 5s infinite; /* Duración de la animación */
+        }
+
+        @keyframes draw {
+            from {
+                stroke-dashoffset: 471;
+            }
+            50% {
+                stroke-dashoffset: 600;
+            }
+            to {
+                stroke-dasharray: 200;
+            }
+        }
+    </style>-->
+</head>
+<body>
+    <main>
+        <div class="texto">
+            <h3>YOUR DAILY</h3>
+            <h2>PROGRESS</h2>
+        </div>
+        <div class="div-circulo-superior">
+            <div class="circulo-grande">
+                <h2>4501</h2>
+                <p>kcal</p>
+                <svg class="svg-grande">
+                    <circle cx="75" cy="75" r="49"></circle>
+                </svg>
+            </div>
+        </div>
+        <div class="div-circulos-inferiores">
+            <div class="circulo-pequeño">
+                <h3>9326</h3>
+                <p>steps</p>
+                <svg class="svg-pequeño uno">
+                    <circle cx="60" cy="60" r="37"></circle>
+                </svg>
+            </div>
+            <div class="circulo-pequeño">
+                <h3>8,1</h3>
+                <p>km</p>
+                <svg class="svg-pequeño dos" id="segundo-circulo">
+                    <circle cx="60" cy="60" r="37"></circle>
+                </svg>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
