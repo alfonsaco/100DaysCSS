@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* DIVS */
+div {
+    background-color: #DE4738;
+    border: 1px solid #f05a4c;
+    transition: 0.1s ease;
+}
+div:hover {
+    background-color: #f05a4c;
+}
+/* Estilos para cambiar el color */
+div.cambiar-color {
+    background-color: #fff;
+    border-color: #fff;
+}
