@@ -16,6 +16,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 /*ESTILOS GENERALES PARA LOS DIVS*/
@@ -40,7 +41,6 @@ div{
     height: 220px;
     width: 220px;
     border-radius: 100%;
-    border: solid #F85B5B 3px;
     animation: circulo 5s infinite;
 }
 @keyframes circulo {
@@ -95,4 +95,32 @@ div{
 .contenido h1{
     margin: 0;
     font-size: 2.9em;
+}
+
+
+/* ANIMACIÓN LÍNENA ROJA */
+svg {
+    width: 225px;
+    height: 225px;
+    position: absolute;
+    rotate: -90deg;
+    top: 137px;
+}
+circle {
+    fill: none;
+    stroke: #F85B5B;
+    stroke-width: 3px;
+    stroke-dasharray: 692;
+    animation: rellenarBorde 6s linear infinite;
+}
+@keyframes rellenarBorde {
+    from {
+        stroke-dashoffset: 692;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -692;
+    }
 }
