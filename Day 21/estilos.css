@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: #2C2E2E;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* ESTILOS DEL PACMAN */
+.pacman {
+    animation: evitarMovimiento 0.7s ease-in-out infinite;
+}
+@keyframes evitarMovimiento {
+    from {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+.ojo {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #2C2E2E;
+    top: 170px;
+    left: 205px;
+    border-radius: 100%;
+    animation: moverOjo 0.7s ease infinite 50ms;
+}
+@keyframes moverOjo {
+    from {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-7px) translateY(-7px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+.semicirculo {
+    background-color: #F4D146;
+    height: 50px;
+    width: 100px;
+}
+.semicirculo:first-of-type {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    animation: bocaArriba 0.7s ease-in-out infinite;
+}
+@keyframes bocaArriba {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-40deg) translateY(5px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.semicirculo:nth-child(2) {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    animation: bocaAbajo 0.7s ease-in-out infinite;
+}
+@keyframes bocaAbajo {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(40deg) translateY(-5px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ESTILOS DE LOS PUNTOS */
+.bits {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    gap: 40px;
+    right: -150px;
+    animation: desplazarBits 1.3s linear infinite;
+}
+@keyframes desplazarBits {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-109px);
+    }
+}
+.bits > div {
+    width: 14px;
+    height: 14px;
+    background-color: #F4D146;
+    border-radius: 100%;
+}
