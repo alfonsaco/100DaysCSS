@@ -23,6 +23,7 @@ main{
     align-items: center;
     color: #fff;
     font-family: Tigre;
+    position: absolute;
 }
 /*DIV QUE CONTIENE EL TEXTO*/
 .container{
@@ -82,3 +83,36 @@ p{
     z-index: 5;
 }
 
+
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    visibility: hidden;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+}

@@ -12,17 +12,18 @@ body{
 main{
     background: linear-gradient(60deg, #f5a952, #C66B34);
     border-radius: 5px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 /*ESTILOS DEL CONTENEDOR*/
 .container{
-    width: 400px;
-    height: 370px;
+    width: 320px;
+    height: 300px;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -72,6 +73,7 @@ main{
 }
 .circulo2:hover{
     transform: rotate(-360deg);
+    cursor: pointer;
 }
 .div-imagen img{
     background-image: url(../Imágenes/WalterWhite.png);
@@ -87,7 +89,7 @@ main{
 /*Estilos para el nombre*/
 .div-nombre{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .div-nombre h2{
     margin: 0;
@@ -113,6 +115,7 @@ main{
 .div-opciones p:hover{
     background-color: #786450;
     color: #fff;
+    cursor: pointer;
 }
 
 
@@ -134,6 +137,7 @@ main{
 }
 .stats div:hover{
     background-color: #d3baa8;
+    cursor: pointer;
 }
 .stats p{
     margin: 0;
@@ -142,4 +146,39 @@ main{
 .stats h1{
     margin: 0;
     font-size: 1.3em;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }

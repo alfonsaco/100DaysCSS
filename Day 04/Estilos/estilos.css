@@ -15,11 +15,15 @@ div{
     align-items: center;
 }
 /*ESTILOS PARA EL CONTENEDOR QUE CONTIENE LOS CÍRCULOS*/
-.container{
+main{
     background-color: #E56262;
     border-radius: 5px;
     width: 400px;
     height: 400px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*ESTILOS PARA LOS CIRCULOS*/
@@ -83,4 +87,39 @@ div{
     80%, 100%{
         scale: 0;
     }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }

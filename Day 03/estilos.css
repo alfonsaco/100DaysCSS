@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 main{
@@ -14,6 +15,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 .circulo{
@@ -68,10 +70,10 @@ main{
     from{
         background-color: #a5a5a5;
     }
-    80%,60%{
+    50%{
         background-color: #c7c7c7;
     }
-    to{
+    60%, to{
         background-color: #fff;
     }
 }
@@ -98,12 +100,47 @@ main{
 }
 @keyframes sol {
     0% {
-          background: #F57209;
-         transform: rotate(-70deg);
+        transform: rotate(-60deg);
+    }
+    50% {
+        transform: rotate(10deg);
     }
     100% {
-          background: #F57209;
-      transform: rotate(70deg);
+        transform: rotate(70deg);
     }
-  }
-  
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
