@@ -21,7 +21,8 @@ main{
     height: 200px;
     border-radius: 100%;
     background-color: bisque;
-    clip-path: fill-box;
+    border-radius: 100%;
+    overflow: hidden;
     animation: desvanecer 5s ease infinite;
 }
 @keyframes desvanecer {
