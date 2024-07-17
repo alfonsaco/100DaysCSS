@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(76, 148, 76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* ICONO */
+#container {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#container i {
+    color: #fff;
+    font-size: 3em;
+}
+i.desaparecer-micro {
+    animation: desaparecer 0.6s ease-in-out forwards 100ms;
+}
+@keyframes desaparecer {
+    from {
+        scale: 1;
+    }
+    30% {
+        scale: 1.2;
+    }
+    to {
+        scale: 0.2;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* BORDE */
+svg {
+    position: absolute;
+    height: 102px;
+    width: 102px;
+    top: 149px;
+    left: 149px;
+}
+svg.animacion-rotar {
+    animation: rotar 4s linear infinite;
+}
+circle {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 4px;
+    stroke-dasharray: 305;
+    stroke-linecap: round;
+}
+circle.animacion-borde {
+    animation: rotarBorde 4s linear infinite;
+}
+@keyframes rotarBorde {
+    from {
+        stroke-dashoffset: 305;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -305;
+    }
+}
+@keyframes rotar {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* PUNTOS */
+.puntos {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.2;
+}
+.puntos > div {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 100%;
+}
+.puntos.aparicion {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+    transition-delay: 0.7s;
+}
+.puntos>div.animacion-puntos {
+    animation: animacionPuntos 0.8s ease-in-out infinite;
+}
+@keyframes animacionPuntos {
+    from {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
