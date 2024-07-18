@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: #010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* RADIO BUTTONS */
+.botones {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+[type="radio"] {
+    display: none;
+}
+label {
+    height: 50px;
+    width: 50px;
+    border: solid 2px #fff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+/* FONDO PORTATIL */
+.fondo {
+    display: flex;
+    position: relative;
+    transition: 1s ease;
+}
+.fondo > div {
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+    position: absolute;
+}
+.fondo > div:first-child {
+    background-color: rgb(151, 22, 22);
+}
+.fondo > div:nth-child(2) {
+    background-color: rgb(212, 181, 0);
+    position: relative;
+    left: 400px;
+}
+.fondo > div:last-child {
+    background-color: rgb(46, 119, 255);
+    left: 800px;
+}
+
+/* BOLA */
+.bola {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 125px;
+    transition: 1s ease;
+}
