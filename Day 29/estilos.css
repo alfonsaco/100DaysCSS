@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ccc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgb(177, 26, 26), rgb(221, 150, 18));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* BUSCADOR */
+[type="text"] {
+    border: 0;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 43px;
+    color: rgb(177, 26, 26);
+    font-weight: bold;
+    font-size: 0.7em;
+}
+[type="text"]::placeholder {
+    color: rgb(167, 167, 167);
+}
+[type="text"]:focus {
+    outline: 0;
+}
+
+/* ICONO */
+i {
+    position: absolute;
+    color: transparent;
+    background: linear-gradient(45deg, rgb(177, 26, 26), rgb(221, 150, 18));
+    background-clip: text;
+    font-size: 1.4em;
+    right: 85px;
+    cursor: pointer;
+}
+
+/* RESULTADOS BÚSQUEDA */
+#busqueda {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-height: 130px;
+    width: 250px;
+    top: 220.6px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    overflow: hidden;
+}
+#busqueda p {
+    color: grey;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#busqueda p:hover {
+    color: rgb(177, 26, 26);
+}
+span {
+    font-weight: bold;
+}
