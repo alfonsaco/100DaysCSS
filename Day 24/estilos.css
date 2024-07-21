@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: rgb(255, 215, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* BOTÓN */
+#boton {
+    width: 250px;
+    height: 60px;
+    background-color: rgb(255, 215, 36);
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+#boton.animacion-boton {
+    animation: botonAnimacion 2s ease forwards;
+}
+@keyframes botonAnimacion {
+    from {
+        width: 250px;
+    }
+    25%, 70% {
+        width: 60px;
+        color: #ffffff00;
+        text-shadow: none;
+        border-color: rgb(150, 122, 0);
+        background-color: rgb(255, 215, 36);
+    }
+    75%, to {
+        background-color: #fff;
+        width: 60px;
+        color: #ffffff00;
+        text-shadow: none;
+        border-color: rgb(150, 122, 0);
+    }
+}
+
+/* TICK */
+img {
+    position: absolute;
+    opacity: 0;
+}
+img.animacion-tick {
+    animation: tickAnimacion 2s ease forwards;
+}
+@keyframes tickAnimacion {
+    from, 65% {
+        opacity: 0;
+    }
+    75%, to {
+        opacity: 1;
+    }
+}
+
+/* SVG */
+svg {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 169px;
+    left: 169px;
+    pointer-events: none;
+}
+circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 183;
+    visibility: hidden;
+}
+circle.animacion-borde {
+    animation: completarBorde 2s linear forwards;
+}
+@keyframes completarBorde {
+    from {
+        stroke-dashoffset: 183;
+        visibility: hidden;
+    }
+    30% {
+        stroke-dashoffset: 183;
+        visibility: visible;
+    }
+    65% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    75%, to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* CIRCULO DE BORDE */
+.circulo {
+    width: 60px;
+    height: 60px;
+    border: 2px #fff solid;
+    position: absolute;
+    border-radius: 100%;
+    visibility: hidden;
+}
+.circulo.animacion-circulo {
+    animation: circuloBorde 2s ease;
+}
+@keyframes circuloBorde {
+    from, 65% {
+        visibility: hidden;
+        scale: 1;
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+        visibility: visible;
+    }
+    85% {
+        scale: 2;
+        opacity: 0;
+    }
+    90%, to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
