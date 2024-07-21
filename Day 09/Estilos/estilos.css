@@ -132,116 +132,25 @@ main {
     justify-content: space-evenly;
     top: 0px;
 }
-.lluvia div {
-    border-radius: 77% 23% 42% 58% / 76% 0% 100% 24% ;
+.gota {
     background-color: #7FC1F9;
-    transform: rotate(-20deg);
-    width: 10px;
+    transform: rotate(38deg);
+    width: 2px;
+    left: -40px;
     height: 10px;
     top: -10px;
     position: relative;
     z-index: 100;
     animation: llover 1.5s linear infinite;
 }
-.lluvia div:nth-child(2) {
-    animation-delay: 1400ms;
-    left: 20px;
-}
-.lluvia div:nth-child(3) {
-    animation-delay: 1440ms;
-    background-color: #5F8CBA;
-    left: 35px;
-}
-.lluvia div:nth-child(4) {
-    animation-delay: 1480ms;
-    left: 40px;
-}
-.lluvia div:nth-child(5) {
-    animation-delay: 90ms;
-    left: 60px;
-}
-.lluvia div:nth-child(6) {
-    animation-delay: 1060ms;
-    background-color: #5F8CBA;
-    left: 75px;
-}
-.lluvia div:nth-child(7) {
-    animation-delay: 110ms;
-    left: 90px;
-}
-.lluvia div:nth-child(8) {
-    animation-delay: 1760ms;
-    left: 110px;
-}
-.lluvia div:nth-child(9) {
-    animation-delay: 206ms;
-    background-color: #5F8CBA;
-    left: 180px;
-}
-.lluvia div:nth-child(10) {
-    background-color: #5F8CBA;
-    animation-delay: 6068ms;
-    left: 155px;
-}
-.lluvia div:nth-child(11) {
-    animation-delay: 1090ms;
-    left: 200px;
-}
-.lluvia div:nth-child(12) {
-    animation-delay: 120ms;
-    background-color: #5F8CBA;
-    left: 230px;
-}
-.lluvia div:nth-child(13) {
-    animation-delay: 1810ms;
-    left: 245px;
-}
-.lluvia div:nth-child(14) {
-    animation-delay: 1600ms;
-    left: 220px;
-}
-.lluvia div:nth-child(15) {
-    animation-delay: 100ms;
-    background-color: #5F8CBA;
-    left: 210px;
-}
-.lluvia div:nth-child(16) {
-    animation-delay: 68ms;
-    left: 195px;
-}
-.lluvia div:nth-child(17) {
-    animation-delay: 440ms;
-    background-color: #5F8CBA;
-    left: 140px;
-}
-.lluvia div:nth-child(18) {
-    animation-delay: 280ms;
-    left: 65px;
-}
-.lluvia div:nth-child(19) {
-    animation-delay: 1660ms;
-    left: 80px;
-}
-.lluvia div:nth-child(19) {
-    animation-delay: 2060ms;
-    left: 165px;
-}
 @keyframes llover {
 	0% {
-		transform: translate(60px, -100px) scaleX(1) scaleY(1) rotate(18deg);
+		transform: translate(60px, -100px);
 		opacity: 1;
 	}
-	94% {
-		transform: translate(12px, 300px) scaleX(1) scaleY(1) rotate(18deg);
+	to {
+		transform: translate(12px, 300px);
 		opacity: 1;
-	}
-	99% {
-		transform: translate(12px, 300px) scaleX(3) scaleY(0.2) rotate(18deg);
-		opacity: 0.3;
-	}
-	100% {
-		transform: translate(12px, 300px) scaleX(3) scaleY(0) rotate(18deg);
-		opacity: 0;
 	}
 }
 
@@ -279,4 +188,40 @@ main {
 .tiempo h1 {
     font-weight: lighter;
     font-size: 2.7em;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+    z-index: 100000;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }
