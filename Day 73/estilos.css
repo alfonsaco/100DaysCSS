@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: rgb(202, 74, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR DEL TEXTO */
+.container {
+    width: 180px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.8em;
+    text-shadow: 0px 3px 0px rgb(161, 61, 103);
+    position: relative;
+    overflow: hidden;
+}
+.container > p {
+    position: relative;
+}
+.container > div {
+    line-height: 45px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    animation: textos 8s ease infinite;
+}
+@keyframes textos {
+    from, 15% {
+        transform: translateY(0px);
+    }
+    20%, 40% {
+        transform: translateY(-45px);
+    }
+    45%, 65% {
+        transform: translateY(-90px);
+    }
+    70%, 90% {
+        transform: translateY(-135px);
+    }
+    95% {
+        transform: translateY(-180px);
+    }
+    95.1%, to {
+        transform: translateY(0px);
+    }
+}
