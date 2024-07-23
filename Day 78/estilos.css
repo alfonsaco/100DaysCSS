@@ -1,26 +1,32 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
 body{
     background-color: #eee;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 main {
     width: 400px;
     height: 400px;
-    background-color: #3498DB;
+    background-color: #bd6477;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: absolute;
 }
 
 
 p{
     margin: 0;
 }
-div{
+div:not(.alfonsaco) {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
     font-size:1.2em;
@@ -31,6 +37,7 @@ div{
     align-items: center;
     margin: 15px 0;
     transition: scale 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 div:first-child:hover{
@@ -47,4 +54,40 @@ div:nth-child(3):hover{
     scale: 1.08;
     transform: translateY(-2px);
     box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }

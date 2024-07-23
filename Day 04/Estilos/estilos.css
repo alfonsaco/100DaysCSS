@@ -16,7 +16,7 @@ div{
 }
 /*ESTILOS PARA EL CONTENEDOR QUE CONTIENE LOS CÍRCULOS*/
 main{
-    background-color: #E56262;
+    background-color: #eee;
     border-radius: 5px;
     width: 400px;
     height: 400px;
@@ -28,11 +28,11 @@ main{
 
 /*ESTILOS PARA LOS CIRCULOS*/
 .grande{
-    background-color: #fff;
+    background-color: brown;
     height: 110px;
     width: 110px;
     border-radius: 100%;
-    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.7);
     z-index: 1;
     animation: bola-grande 8s infinite ease-in-out;
 }
@@ -41,16 +41,16 @@ main{
     height: 75px;
     width: 75px;
     border-radius: 100%;
-    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.7);
     z-index: 2;
     animation: bola-media 8s infinite ease-in-out;
 }
 .chico{
-    background-color: #fff;
+    background-color: brown;
     height: 35px;
     width: 35px;
     border-radius: 100%;
-    box-shadow: 8px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 8px 5px 15px rgba(0,0,0,0.7);
     z-index: 3;
     animation: bola-peq 8s infinite ease-in-out;
 }
@@ -73,7 +73,7 @@ main{
     35%, 75% {
         scale: 1;
     }
-    90%, 100%{
+    85%, 100%{
         scale: 0;
     }
 }
@@ -81,7 +81,7 @@ main{
     from, 30%{
         scale: 0;
     }
-    40%, 60%{
+    40%, 70%{
         scale: 1;
     }
     80%, 100%{
@@ -101,7 +101,8 @@ main{
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    opacity: 0.4;
+    opacity: 1;
+    border: 2px solid rgb(187, 187, 187);
     cursor: pointer;
     overflow: hidden;
     transition: 0.5s ease;

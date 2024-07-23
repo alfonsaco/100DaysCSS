@@ -17,10 +17,10 @@ for (let i=0; i<174; i++) {
     }`, animaciones.sheet.cssRules.length);
     
     if(contAnimacion >= 87) {
-        movimiento-=1+(movimiento*0.01);
+        movimiento-=1+(movimiento*0.012);
     } else {
-        movimiento+=1+(movimiento*0.01);
+        movimiento+=1+(movimiento*0.012);
     }
 }
 
-container.innerHTML=contenidoHTML;
+container.innerHTML+=contenidoHTML;

@@ -14,7 +14,7 @@ body{
 
 main{
     background: rgb(63,34,195);
-    background: linear-gradient(31deg, rgba(63,34,195,1) 0%, rgba(45,253,188,1) 100%);
+    background: linear-gradient(31deg, rgb(195, 34, 34) 0%, rgb(230, 255, 118) 100%);
     width: 400px;
     height: 400px;
     display: flex;

@@ -1,3 +1,7 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
 body{
     background-color: #c9c9c9;
     display: flex;
@@ -6,6 +10,7 @@ body{
     height: 100vh;
     color: #FFF;
     font-family: sans-serif;
+    margin: 0;
 }
 
 main{
@@ -15,10 +20,11 @@ main{
     border-radius: 5px;
     display: flex;
     overflow: hidden;
+    position: absolute;
 }
 
 /*DIVS*/
-div{
+div:not(.alfonsaco) { 
     height: 100%;
     width: 25%;
     display: flex;
@@ -26,12 +32,13 @@ div{
     align-items: center;
     transition-duration: 0.7s;
     transition-timing-function: ease-in-out;
+    cursor: pointer;
 }
 div:nth-child(even){
-    background-color: #E67E22;
+    background-color: #910c0c;
 }
 div:nth-child(odd){
-    background-color: #34495E;
+    background-color: #3d0000;
 }
 
 /*ESTILOS PARA EL HOVER DEL DIV*/
@@ -86,4 +93,41 @@ div:hover{
 .cuatro:hover::after{
     opacity: 1;
     scale: 1.7;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff !important;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+    background-color: #fff;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }

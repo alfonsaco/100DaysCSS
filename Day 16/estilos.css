@@ -18,6 +18,7 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
+    overflow: hidden;
 }
 
 /* BOLA, CON SU ANIMACIÓN COMPLETA */

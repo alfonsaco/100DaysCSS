@@ -1,3 +1,7 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +22,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 /* ESTILOS DEL RANGE */
@@ -59,6 +64,41 @@ main {
   box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
 }
 
+/* ALFONSACO */
+.alfonsaco {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.4;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.alfonsaco:hover {
+  opacity: 1;
+  width: 95px;
+}
+.alfonsaco a {
+  color: #252525;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  font-size: 0.9em;
+}
+.alfonsaco:hover a {
+  visibility: visible;
+  opacity: 1;
+}
 
 /*
   En Mozilla:
