@@ -1,3 +1,8 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 * {
     margin: 0;
     padding: 0;
@@ -18,17 +23,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 /* CONTENEDOR DEL TEXTO */
 .container {
-    width: 180px;
+    width: 190px;
     height: 45px;
     display: flex;
     align-items: center;
-    gap: 5px;
     color: #fff;
-    font-family: sans-serif;
+    font-family: 'Open Sans';
     font-size: 1.8em;
     text-shadow: 0px 3px 0px rgb(161, 61, 103);
     position: relative;
@@ -36,6 +41,7 @@ main {
 }
 .container > p {
     position: relative;
+    left: 0px;
 }
 .container > div {
     line-height: 45px;
@@ -43,6 +49,7 @@ main {
     right: 0px;
     top: 0px;
     animation: textos 8s ease infinite;
+    font-weight: bold;
 }
 @keyframes textos {
     from, 15% {
@@ -63,4 +70,40 @@ main {
     95.1%, to {
         transform: translateY(0px);
     }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }
