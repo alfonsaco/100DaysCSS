@@ -1,0 +1,144 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(61, 57, 53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* MODAL */
+.modal {
+    height: 210px;
+    width: 300px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.modal.animacion-inicial {
+    animation: entrada 0.7s ease-in-out;
+}
+@keyframes entrada {
+    from {
+        scale: 0;
+    }
+    85% {
+        scale: 1.1;
+    }
+    90% {
+        scale: 0.95;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+/* PARTE DE ARRIBA */
+.arriba {
+    background-color: #fff;
+    width: 100%;
+    height: 80%;
+    font-family: 'Open Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    color: rgb(83, 83, 83);
+    padding: 10px;
+}
+i {
+    color: rgb(255, 108, 108);
+    font-size: 2.8em;
+}
+h2 {
+    font-weight: normal;
+    font-size: 1.4em;
+}
+p {
+    font-size: 0.9em;
+}
+
+/* PARTE DE ABAJO */
+#boton {
+    height: 20%;
+    width: 100%;
+    background-color: rgb(255, 108, 108);
+    color: #fff;
+    font-family: 'Open Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.modal.animacion-invertida {
+    animation: salida 0.7s ease forwards;
+}
+@keyframes salida {
+    from {
+        scale: 1;
+    }
+    30% {
+        scale: 1.1;
+    }
+    to {
+        scale: 0;
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
