@@ -1,0 +1,114 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #009e89;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* CONTENEDOR CON CADA CARA */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    animation: cosas 6s ease infinite;
+}
+[class*=circulo] {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 10px solid #ffffff71;
+    position: absolute;
+}
+.circulo1 {
+    transform: rotateX(0deg);
+}
+.circulo2 {
+    transform: rotateX(30deg);
+}
+.circulo3 {
+    transform: rotateX(60deg);
+}
+.circulo4 {
+    transform: rotateX(90deg);
+}
+.circulo5 {
+    transform: rotateX(120deg);
+}
+.circulo6 {
+    transform: rotateX(150deg);
+}
+/* Animación */
+@keyframes cosas {
+    0% {
+		transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+	}
+	25% {
+		transform: rotateY(95deg) rotateX(210deg) rotateZ(60deg);
+	}
+	50% {
+		transform: rotateY(140deg) rotateX(40deg) rotateZ(90deg);
+	}
+	75% {
+		transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+	}
+	100% {
+		transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+	}
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
