@@ -1,0 +1,88 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+.cuadrado {
+    height: 300px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid #b40600;
+    filter: drop-shadow(0px 0px 2px rgb(255, 66, 66));
+    animation: animacion 5s ease infinite forwards;
+}
+
+@keyframes animacion {
+    from {
+        width: 100px;
+        border-radius: 100%;
+    }
+    50% {
+        width: 300px;
+        border-radius: 0%;
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
