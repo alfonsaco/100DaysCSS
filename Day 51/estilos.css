@@ -1,0 +1,105 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    font-family: 'Open Sans';
+}
+
+/* BOTONES */
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+i {
+    color: #fff;
+    font-size: 1.8em;
+    transition: 0.4s ease;
+    position: absolute;
+    cursor: pointer;
+    filter: drop-shadow(0px 5px 7px rgba(0,0,0,0.6));
+}
+i.desaparecer {
+    visibility: hidden;
+    opacity: 0;
+    scale: 0;
+}
+
+/* CONTADOR */
+.contador {
+    width: 140px;
+    height: 60px;
+    background-color: #fff;
+    border: 8px solid grey;
+    border-image: linear-gradient(45deg, grey, rgb(51, 51, 51));
+    border-image-slice: 1;
+    outline: 2px solid #000;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    color: #4e4e4e;
+    letter-spacing: 5px;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
