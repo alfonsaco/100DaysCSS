@@ -1,0 +1,112 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    width: 400px;
+    height: 400px;
+    background-color: #111111;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* BOTÓN */
+.boton {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    background-color: transparent;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.247), inset 0px 2px 5px rgba(255, 255, 255, 0.247);
+    box-sizing: content-box;
+    transition: 0.1s linear;
+    cursor: pointer;
+    position: absolute;
+}
+.boton.estilos-check {
+    background-color: rgb(211, 0, 0);
+    background: radial-gradient(rgb(211, 0, 0), rgb(70, 3, 3));
+    width: 15px;
+    height: 15px;
+    border-width: 14.5px;
+}
+
+/* PUNTAS */
+.puntas {
+    position: absolute;
+    top: 193px;
+    left: 199px;
+}
+.puntas > div {
+    width: 2px;
+    background-color: #fff;
+    background: linear-gradient(to bottom, #fff, #ffffff04);
+    height: 15px;
+    position: absolute;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.puntas>div.puntas-animacion {
+    animation: puntasAni 0.5s ease forwards;
+}
+@keyframes puntasAni {
+    from {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(55px);
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
