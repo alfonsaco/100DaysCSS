@@ -1,0 +1,242 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    position: absolute;
+    overflow: hidden;
+}
+
+/* ANIMACIÓN */
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main > div > div {
+    position: absolute;
+}
+/* Animación para cada figura */
+main > div > div:first-child {
+    background-color: #fff;
+    width: 100%;
+    height: 10px;
+    animation: divUno 4s ease infinite;
+}
+@keyframes divUno {
+    from {
+        rotate: 0deg;
+    }
+    20% {
+        rotate: 45deg;
+        transform: none;
+    }
+    40% {
+        transform: translateX(-15px);
+        width: 100%;
+        height: 10px;
+    }
+    60% {
+        transform: none;
+        width: 20px;
+        height: 20px;
+        rotate: 45deg;
+    }
+    84% {
+        rotate: 0deg;
+    }
+    85% {
+        width: 20px;
+        height: 20px;
+    }
+    to {
+        width: 100%;
+        height: 10px;
+        rotate: 0deg;
+    }
+}
+
+main > div > div:last-child {
+    background-color: #fff;
+    width: 10px;
+    height: 100%;
+    animation: divDos 4s ease infinite;
+}
+@keyframes divDos {
+    from {
+        rotate: 0deg;
+    }
+    20% {
+        rotate: 45deg;
+        transform: none;
+    }
+    40% {
+        transform: translateX(15px);
+        width: 10px;
+        height: 100%;
+    }
+    60% {
+        transform: none;
+        width: 20px;
+        height: 20px;
+    }
+    85% {
+        width: 20px;
+        height: 20px;
+        rotate: 45deg;
+    }
+    to {
+        width: 10px;
+        height: 100%;
+        rotate: 0deg;
+        rotate: 0deg;
+    }
+}
+
+/* FONDO SUPER MEGA ULTRA MÁGICO */
+[class*="fondo"] {
+    filter: blur(50px);
+    background-color: rgba(165, 42, 42, 0.377);
+    position: absolute;
+    rotate: -45deg;
+    left: -400px;
+    top: -200px;
+    animation: fondoMover 10s ease infinite;
+}
+.fondo {
+    height: 200px;
+    width: 600px;
+}
+.fondo-1 {
+    height: 50px;
+    width: 600px;
+    background-color: rgba(165, 136, 42, 0.377);
+    animation-delay: 500ms;
+    animation-duration: 8s;
+}
+.fondo-2 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(42, 165, 63, 0.377);
+    animation-delay: -5s;
+    animation-duration: 7s;
+}
+.fondo-3 {
+    height: 200px;
+    width: 600px;
+    background-color: rgba(42, 116, 165, 0.377);
+    animation-delay: 1s;
+    animation-duration: 12s;
+}
+.fondo-4 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(165, 42, 124, 0.377);
+    animation-delay: 700ms;
+    animation-duration: 9s;
+}
+.fondo-5 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(42, 161, 165, 0.377);
+    animation-delay: -700ms;
+    animation-duration: 6s;
+}
+.fondo-6 {
+    height: 200px;
+    width: 600px;
+    background-color: rgba(118, 165, 42, 0.377);
+    animation-delay: 900ms;
+    animation-duration: 12s;
+}
+.fondo-7 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(165, 42, 124, 0.377);
+    animation-delay: -1s;
+    animation-duration: 9s;
+}
+.fondo-8 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(221, 112, 23, 0.377);
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.fondo-9 {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(184, 17, 17, 0.377);
+    animation-delay: -2s;
+    animation-duration: 5s;
+}
+@keyframes fondoMover {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    40%, 60% {
+        transform: translateY(1000px) translateZ(1000px);
+    }
+    to {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8282;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+    z-index: 100;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+    height: 30px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    color: #fff;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
