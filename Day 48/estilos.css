@@ -1,0 +1,115 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgb(190, 247, 255), rgb(57, 166, 209));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 700px;
+}
+
+
+/* CUBO */
+.cubo {
+    background-color: rgb(182, 182, 182);
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+    transition: 2s ease;
+}
+.cubo:hover {
+    transform: rotateY(-130deg) rotateX(-165deg) rotateZ(-20deg);
+}
+
+/* CARAS DEL CUBO */
+.cubo div {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    background-size: cover;
+}
+.arriba {
+    background-color: #497B26;
+    background-image: url(https://www.filterforge.com/filters/11635-v7.jpg);
+    transform: translateY(-90px) rotateX(90deg);
+}
+.abajo {
+    background-color: #6D4E3C;
+    background-image: url(https://i.pinimg.com/474x/26/6d/f7/266df7ab6322509273a9cddeeee5a3e7.jpg);
+    transform: translateY(90px) rotateX(90deg);
+}
+.izquierda {
+    background-color: #6D4E3C;
+    background-image: url(https://filterforge.com/filters/11635.jpg);
+    transform: translateX(-90px) rotateY(90deg);
+}
+.derecha {
+    background-color: #6D4E3C;
+    background-image: url(https://filterforge.com/filters/11635.jpg);
+    transform: translateX(90px) rotateY(90deg);
+}
+.delante {
+    background-color: #6D4E3C;
+    background-image: url(https://filterforge.com/filters/11635.jpg);
+    transform: translateZ(-90px);
+}
+.detras {
+    background-color: #6D4E3C;
+    background-image: url(https://filterforge.com/filters/11635.jpg);
+    transform: translateZ(90px);
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
