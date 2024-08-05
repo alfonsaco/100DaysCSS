@@ -1,0 +1,96 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* ANILLOS */
+.anillo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    opacity: 0;
+    animation: ciclo 10s ease infinite;
+}
+@keyframes ciclo {
+    from {
+        transform: none;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-30px) translateX(-30px) scale(4);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(700px) translateX(700px) scale(21);
+    }
+}
+
+/* PUNTOS DEL ANILLO */
+.punto {
+    width: 0.2px;
+    height: 0.2px;
+    background-color: #fff;
+    position: absolute;
+    transform: translateY(25px);
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+    z-index: 100;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
