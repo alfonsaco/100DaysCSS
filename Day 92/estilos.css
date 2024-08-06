@@ -1,0 +1,181 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    overflow: hidden;
+}
+
+/* BOlA */
+main div {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 5px #fff23a);
+}
+/* ESQUINAS */
+/* Esquina arriba izquierda */
+[class*="top-left"] {
+    top: 0px;
+    left: 0px;
+    animation: esquina 2.8s linear infinite alternate;
+}
+.top-left2 {
+    rotate: -36.5deg;
+}
+
+/* Esquina arriba derecha */
+[class*="top-right"] {
+    top: 0px;
+    right: 0px;
+    animation: esquina 2.8s linear infinite alternate forwards;
+}
+.top-right {
+    rotate: 90deg;
+}
+.top-right2 {
+    rotate: 53.5deg;
+}
+
+/* Esquina abajo derecha */
+[class*="bottom-right"] {
+    bottom: 0px;
+    right: 0px;
+    animation: esquina 2.8s linear infinite alternate forwards;
+}
+.bottom-right {
+    rotate: 143.5deg;
+}
+.bottom-right2 {
+    rotate: 180deg;
+}
+
+/* Esquina abajo izquierda */
+[class*="bottom-left"] {
+    bottom: 0px;
+    left: 0px;
+    animation: esquina 2.8s linear infinite alternate forwards;
+}
+.bottom-left {
+    rotate: 233.5deg;
+}
+.bottom-left2 {
+    rotate: 270deg;
+}
+@keyframes esquina {
+    from {
+        transform: translateX(0px) translateY(0px);
+    }
+    to {
+        transform: translateX(196px) translateY(389px);
+    }
+}
+
+
+
+/* LADOS */
+/* Lado izquierdo */
+[class*="left-side"] {
+    left: 0px;
+    top: calc(50% - 5.5px);
+    animation: lados 1.5s linear infinite alternate;
+}
+.left-side2 {
+    rotate: 270deg;
+}
+/* Arriba */
+[class*="top-side"] {
+    top: 0px;
+    left: calc(50% - 5.5px);
+    animation: lados 1.5s linear infinite alternate;
+}
+.top-side {
+    rotate: 90deg;
+}
+/* Lado derecho */
+[class*="right-side"] {
+    right: 0px;
+    top: calc(50% - 5.5px);
+    animation: lados 1.5s linear infinite alternate;
+}
+.right-side {
+    rotate: 90deg;
+}
+.right-side2 {
+    rotate: 180deg;
+}
+/* Abajo */
+[class*="bottom-side"] {
+    bottom: 0px;
+    left: calc(50% - 5.5px);
+    animation: lados 1.5s linear infinite alternate;
+}
+.bottom-side {
+    rotate: -90deg;
+}
+.bottom-side2 {
+    rotate: 180deg;
+}
+@keyframes lados {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    to {
+        transform: translateY(197px) translateX(197px);
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
