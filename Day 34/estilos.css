@@ -1,0 +1,190 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(21, 48, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    gap: 120px;
+}
+
+/* LETRAS */
+svg {
+    position: absolute;
+}
+path {
+    fill: none;
+    stroke: #fff;
+    scale: 4;
+    stroke-linecap: round;
+    animation: rellenarLetras 6s ease-in-out forwards;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+@keyframes rellenarLetras {
+    from {
+        stroke-dashoffset: 300;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* H */
+.letra-h1 {
+    left: 40px;
+    bottom: 110px;
+    width: 100px;
+    height: 170px
+}
+.letra-h1 path {
+    scale: 1.8;
+    stroke-width: 1.3px;
+}
+.letra-h2 {
+    left: 45px;
+    bottom: 80px;
+    width: 100px;
+    height: 170px
+}
+.letra-h2 path {
+    stroke: rgb(255, 255, 255);
+    scale: 1.8;
+    stroke-width: 1.3px;
+}
+.letra-h3 {
+    left: 100px;
+    bottom: 135px;
+    width: 100px;
+    height: 170px
+}
+.letra-h3 path {
+    stroke: rgb(255, 255, 255);
+    scale: 1.5;
+    stroke-width: 1.6px;
+}
+
+/* E */
+.letra-e {
+    width: 60px;
+    height: 75px;
+    left: 150px;
+    bottom: 155px;
+}
+/* L */
+.letra-l {
+    left: 200px;
+    bottom: 155px;
+    width: 50px;
+    height: 110px;
+}
+.letra-l path {
+    scale: 3.5;
+    stroke-width: 1.3px;
+}
+.letra-l2 {
+    left: 240px;
+    bottom: 155px;
+    width: 50px;
+    height: 110px;
+}
+.letra-l2 path {
+    scale: 3.5;
+    stroke-width: 1.3px;
+}
+/* O */
+.letra-o {
+    left: 280px;
+    bottom: 145px;
+    height: 80px;
+    width: 70px;
+}
+.letra-o path {
+    scale: 3.2;
+}
+
+
+/* ANIMACIÓN LÍNEAS */
+.linea {
+    width: 70%;
+    height: 3px;
+    display: flex;
+}
+.linea div {
+    width: 100%;
+    height: 100%;
+}
+.linea div div {
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    animation: fill 2s ease forwards;
+}
+.izq {
+    display: flex;
+    justify-content: right;
+}
+
+@keyframes fill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
