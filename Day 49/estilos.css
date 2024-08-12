@@ -1,0 +1,93 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* CURSOR FINAL */
+#cursor {
+    background-color: crimson;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: 100;
+    transition: 0.3s ease;
+    pointer-events: none;
+    transform: translateY(190px) translateX(190px);
+}
+
+/* BORDE ANIMADO */
+.borde {
+    border: crimson 2px solid;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: animacionBorde 1.5s ease infinite;
+}
+@keyframes animacionBorde {
+    from {
+        scale: 0.6;
+        opacity: 1;
+    }
+    70%, to {
+        scale: 2.4;
+        opacity: 0;
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
