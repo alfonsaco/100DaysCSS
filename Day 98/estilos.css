@@ -76,25 +76,25 @@ main {
     }
 }
 .figura:nth-child(19) {
-    background-color: rgb(75, 116, 14);
+    background-color: rgb(255, 224, 85);
     height: 15px;
     width: 15px;
     rotate: 50deg;
 }
 .figura:nth-child(18) {
-    background-color: rgb(45, 153, 108);
+    background-color: rgba(199, 115, 6, 0.788);
     height: 20px;
     width: 20px;
     rotate: 0deg;
 }
 .figura:nth-child(17) {
-    background-color: rgb(206, 103, 43);
+    background-color: rgb(196, 174, 51);
     height: 40px;
     width: 40px;
     rotate: 90deg;
 }
 .figura:nth-child(16) {
-    border: 10px rgb(185, 42, 6) solid;
+    border: 10px rgb(184, 173, 27) solid;
     border-radius: 100%;
     height: 25px;
     width: 25px;
@@ -107,7 +107,7 @@ main {
     rotate: 180deg;
 }
 .figura:nth-child(6) {
-    background-color: #5F9EA0;
+    background-color: #88b805;
     height: 10px;
     width: 10px;
     rotate: 60deg;
@@ -132,7 +132,7 @@ main {
     width: 25px;
 }
 .figura:nth-child(10) {
-    border: 4px rgb(197, 44, 34) solid;
+    border: 7px rgb(213, 247, 92) solid;
     border-radius: 100%;
     rotate: 320deg;
     height: 30px;
@@ -151,7 +151,7 @@ main {
     width: 20px;
 }
 .figura:nth-child(13) {
-    border: 6px rgb(185, 114, 21) solid;
+    border: 6px rgb(145, 148, 4) solid;
     border-radius: 100%;
     rotate: 150deg;
     height: 10px;
@@ -164,7 +164,7 @@ main {
     width: 30px;
 }
 .figura:nth-child(15) {
-    border: 7px rgb(207, 125, 87) solid;
+    border: 7px rgb(219, 171, 14) solid;
     border-radius: 100%;
     rotate: 260deg;
     height: 20px;

@@ -32,6 +32,7 @@ main {
     border-image: linear-gradient(red,orange,yellow,green,blue,purple);
     border-image-slice: 1;
     position: absolute;
+    background-color: #000;
     animation: moverCubos 2.5s infinite alternate ease-in-out;
 }
 main:hover .cuadrado {

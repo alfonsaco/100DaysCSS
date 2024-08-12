@@ -1,3 +1,7 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
 *{
     box-sizing: content-box;
 }
@@ -8,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 /*ESTILOS DE LOS CONTENEDORES*/
@@ -19,6 +24,7 @@ main{
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 .container{
     width: 200px;
@@ -62,65 +68,66 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-.bola-pequeña{
     background-color: orange;
-    width: 5px;
-    height: 10px;
-    margin-bottom: -8px;
-    border-radius: 30px;
-    filter: drop-shadow(0px 0px 10px orange) drop-shadow(0px 0px 5px yellow);
-    animation: movimiento 5s ease-in-out infinite reverse;
+    width: 15px;
+	height: 25px;
+    filter: drop-shadow(0px 0px 5px rgb(248, 232, 0)) drop-shadow(0px 0px 2px rgb(255, 124, 2));
+    animation: movimiento 12s ease-in-out infinite reverse;
 }
-.bola-media{
-    background-color: orange;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    margin-bottom: -7px;
-    filter: drop-shadow(0px 0px 10px orange);
-    animation: horizontl 1.5s ease-in-out infinite alternate-reverse;
-}
-.bola-grande{
-    background-color: orange;
-    width: 13px;
-    height: 15px;
-    border-radius: 50%;
-    margin-bottom: -2px;
-    z-index: 10;
-    filter: drop-shadow(0px 0px 10px orange);
-    animation: alargar 2s ease-in-out infinite alternate-reverse;
+.fuego-pequeño {
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 145, 0, 0.651);
+    width: 7px;
+	height: 15px;
+    filter: drop-shadow(0px 0px 2px rgb(255, 40, 2));
+    animation: movimiento 12s ease-in-out infinite reverse;
 }
 @keyframes movimiento {
-    from{
-        transform: translateX(2px) translateY(1px);
-    }
-    25%{
-        transform: translateX(2px) translateY(-1px);
-    }
-    50%{
-        transform: translateX(-2px) translateY(-1px);
-    }
-    75%{
-        transform: translateX(-2px) translateY(1px);
-    }
-    to{
-        transform: translateX(2px) translateY(1px);
-    }
+	0%, 22%, 49%, 62%, 81%, 100% {
+		border-radius: 2px 14px 8px 8px / 20px 20px 8px 8px;
+	}
+	14%, 32%, 56%, 70%, 89% {
+		border-radius: 14px 2px 8px 8px / 20px 20px 8px 8px;
+	}
 }
-@keyframes horizontl {
-    from{
-        transform: translateX(1px);
-    }
-    to{
-        transform: translateX(-1px);
-    }
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
 }
-@keyframes alargar {
-    from{
-        transform: scaleY(1);
-    }
-    to{
-        transform: scaleY(1.1);
-    }
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
 }

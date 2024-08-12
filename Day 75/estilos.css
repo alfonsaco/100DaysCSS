@@ -22,6 +22,7 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
+    perspective: 800px;
 }
 
 /* CONTENEDOR CON CADA CARA */
@@ -29,7 +30,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 800px;
     transform-style: preserve-3d;
     animation: cosas 6s ease infinite;
 }

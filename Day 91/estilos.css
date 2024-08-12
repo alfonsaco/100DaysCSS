@@ -22,12 +22,12 @@ main {
     justify-content: center;
     align-items: center;
     position: absolute;
+    perspective: 1000px;
 }
 
 /* ESTILOS DEL CUBO */
 .cubo {
     position: absolute;
-    perspective: 1000px;
     transform-style: preserve-3d;
     width: 130px;
     height: 130px;
