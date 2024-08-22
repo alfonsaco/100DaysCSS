@@ -1,0 +1,173 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: #1C1C1C;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.animacion {
+    animation: pestañeo 5s ease infinite;
+}
+/* OJO */
+.ojo {
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 0px 90%;
+    rotate: -45deg;
+    box-shadow: inset 15px 15px 15px #C4E8F8, inset -15px -15px 15px #C4E8F8;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes pestañeo {
+    from, 10% {
+        transform: scaleY(1);
+    }
+    13% {
+        transform: scaleY(0);
+    }
+    16%, 25% {
+        transform: scaleY(1);
+    }
+    28% {
+        transform: scaleY(0);
+    }
+    31%, 40% {
+        transform: scaleY(1);
+    }
+    43% {
+        transform: scaleY(0);
+    }
+    46%, 60% {
+        transform: scaleY(1);
+    }
+    63% {
+        transform: scaleY(0);
+    }
+    66%, 90% {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+/* PUPILA E IRIS */
+.iris {
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: movimientoOjo 5s ease infinite;
+}
+@keyframes movimientoOjo {
+    from, 15% {
+        transform: none;
+    }
+    20%, 30% {
+        transform: translateY(0px) translateX(-20px) translateZ(-20px);
+    }
+    35%, 45% {
+        transform: translateY(25px) translateX(0px) translateZ(25px);
+    }
+    50%, to {
+        transform: none;
+    }
+}
+.raya {
+    height: 15px;
+    width: 2px;
+    background-color: #6B366D;
+    position: absolute;
+    transform: translateY(27px);
+}
+
+.pupila {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pupila-morada {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(#6B366D, #000 80%);
+    border-radius: 100%;
+}
+.reflejo {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    right: 10px;
+    transform: scaleY(0.9);
+    z-index: 100;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
