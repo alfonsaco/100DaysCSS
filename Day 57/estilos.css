@@ -1,0 +1,132 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 600px;
+}
+
+.icosaedro {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: rotateY(30deg);
+    z-index: 100;
+    bottom: 150px;
+    transition: 4s ease;
+}
+.icosaedro:hover {
+    transform: rotateX(-320deg) rotateY(180deg) rotateZ(220deg);
+}
+.icosaedro:hover div {
+    opacity: 0.5;
+}
+.icosaedro div {
+    position: absolute;
+    opacity: 0.8;
+    transition: 4s ease;
+}
+
+/* BASE */
+.base {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(143, 22, 22);
+    transform: rotateX(90deg) translateZ(-75px);
+}
+
+/* LADOS */
+[class*="triangulo"] {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 150px;
+    height: 150px;
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+.triangulo:nth-child(2) {
+    transform: translateX(31px) rotateY(90deg) rotateX(30deg) translateY(11px);
+    background-color: crimson;
+}
+.triangulo:nth-child(3) {
+    transform: translateX(-31px) rotateY(90deg) rotateX(-30deg) translateY(11px);
+    background-color: rgb(220, 20, 20);
+}
+.triangulo:nth-child(4) {
+    transform: translateZ(31px) rotateX(30deg) translateY(11px);
+    background-color: rgb(194, 18, 18);
+}
+.triangulo:nth-child(5) {
+    transform: translateZ(-31px) rotateX(-30deg) translateY(11px);
+    background-color: rgb(136, 14, 38);
+}
+
+.sombra {
+    width: 150px;
+    height: 150px;
+    background-color: #a3a3a33f;
+    transform: rotateX(80deg);
+    border-radius: 100%;
+    filter: blur(10px);
+    position: absolute;
+    bottom: 10px;
+    z-index: 0;
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
