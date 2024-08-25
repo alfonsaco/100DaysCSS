@@ -1,0 +1,236 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+main {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+main >  div {
+    position: absolute;
+}
+
+div > div {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    position: absolute;
+    animation: luzNeon 3s linear infinite alternate;
+    z-index: 100;
+}
+
+/* LETRA E */
+.letra-e {
+    left: 65px;
+    top: 33%;
+}
+.e1 {
+    width: 6px;
+    height: 130px;
+    animation-delay: 150ms;
+}
+.e2 {
+    height: 6px;
+    width: 65px;
+    left: 9px;
+    animation-delay: 250ms;
+}
+.e3 {
+    height: 6px;
+    width: 65px;
+    left: 9px;
+    top: 124px;
+    animation-delay: 1s;
+}
+.e4 {
+    height: 6px;
+    width: 55px;
+    left: 9px;
+    top: 62px;
+    animation-delay: 500ms;
+}
+
+/* LETRA N */
+.letra-n {
+    left: 155px;
+    top: 33%;
+}
+.n1 {
+    width: 6px;
+    height: 130px;
+    animation-delay: 1.3s;
+}
+.n2 {
+    width: 6px;
+    height: 140px;
+    transform: rotate(-25deg);
+    left: 38px;
+    top: -5px;
+    animation-delay: 1.1s;
+}
+.n3 {
+    width: 6px;
+    height: 130px;
+    left: 77px;
+    animation-delay: 750ms;
+}
+
+/* LETRA D */
+.letra-d {
+    left: 255px;
+    top: 33%;
+}
+.d1 {
+    width: 6px;
+    height: 130px;
+    animation-delay: 200ms;
+}
+
+.d2-1 {
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    animation: bordes 3s linear infinite alternate;
+    border: 6px solid;
+    border-color: #1a1a1a;
+    background-color: rgb(37, 37, 37);
+    z-index: 5;
+    left: -45px;
+    animation-delay: 1.5s;
+}
+.d2-2 {
+    height: 170px;
+    width: 120px;
+    border-radius: 0;
+    animation: none !important;
+    right: -15px;
+    bottom: -157px;
+    background-color: rgb(37, 37, 37);
+    z-index: 10;
+}
+[class*="bola"] {
+    height: 6px;
+    width: 6px;
+    animation-delay: 1.5s;
+}
+.bola1 {
+    left: 11px;
+}
+.bola2 {
+    left: 11px;
+    top: 124px;
+}
+
+@keyframes luzNeon {
+    from, 33% {
+        background-color: #1a1a1a;
+        filter: none;
+    }
+    33.1%, 36% {
+        background-color: #fff;
+        filter: drop-shadow(0px 0px 5px #fff);
+    }
+    36.1%, 39% {
+        background-color: #1a1a1a;
+        filter: none;
+    }
+    39.1%, 42% {
+        background-color: #fff;
+        filter: drop-shadow(0px 0px 5px #fff);
+    }
+    42.1%, 45% {
+        background-color: #1a1a1a;
+        filter: none;
+    }
+    45.1%, to {
+        background-color: #fff;
+        filter: drop-shadow(0px 0px 5px #fff);
+    }
+}
+@keyframes bordes {
+    from, 33% {
+        border-color: #1a1a1a;
+        filter: none;
+        box-shadow: none;
+    }
+    33.1%, 36% {
+        border-color: #fff;
+        filter: drop-shadow(0px 0px 3px #fff);
+        box-shadow: inset 0px 0px 8px #fff;
+    }
+    36.1%, 39% {
+        border-color: #1a1a1a;
+        filter: none;
+        box-shadow: none;
+    }
+    39.1%, 42% {
+        border-color: #fff;
+        filter: drop-shadow(0px 0px 3px #fff);
+        box-shadow: inset 0px 0px 8px #fff;
+    }
+    42.1%, 45% {
+        border-color: #1a1a1a;
+        filter: none;
+        box-shadow: none;
+    }
+    45.1%, to {
+        border-color: #fff;
+        filter: drop-shadow(0px 0px 3px #fff);
+        box-shadow: inset 0px 0px 8px #fff;
+    }
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
