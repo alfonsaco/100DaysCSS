@@ -1,0 +1,121 @@
+/* 
+    CODE BY @alfonsaco 
+https://github.com/alfonsaco
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    font-family: 'Open Sans';
+}
+main {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+/* CAJAS */
+div, input {
+    width: 220px;
+    height: 50px;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solucion {
+    background-color: rgb(79, 160, 79);
+    z-index: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Parte 3D */
+.container {
+    perspective: 300px;
+    transform-style: preserve-3d;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px #00000041;
+}
+input {
+    border: 0;
+    backface-visibility: hidden;
+    text-align: center;
+    transform-origin: top;
+    transition: 0.6s ease;
+    transform: rotateX(0deg);
+    font-family: 'Open Sans';
+    font-size: 1.02em;
+    z-index: 10;
+}
+input:focus {
+    outline: 0;
+}
+.secret {
+    backface-visibility: hidden;
+    transform: rotateX(-180deg);
+    transition: 0.6s ease;
+    transform-origin: top;
+    font-weight: bold;
+    color: #2e2e2e;
+    z-index: 10;
+}
+/* Animaciones */
+input.input-activo {
+    transform: rotateX(180deg) translateY(-50px);
+}
+.secret.div-activo {
+    transform: rotateX(0deg) translateY(-50px);
+}
+
+/* ALFONSACO */
+.alfonsaco {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.alfonsaco:hover {
+    opacity: 1;
+    width: 95px;
+}
+.alfonsaco a {
+    color: #252525;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    font-size: 0.9em;
+}
+.alfonsaco:hover a {
+    visibility: visible;
+    opacity: 1;
+}
