@@ -5,5 +5,6 @@
 <p align="center"><b>MI PERFIL: </b>https://100dayscss.com/progress/alfonsaco/</p>
 <br>
 <div align="center">
-  ![100DayCSS](https://github.com/user-attachments/assets/6dbae378-0320-48f6-b308-060fb7a8e0df)
+
 </div>
+![100DayCSS](https://github.com/user-attachments/assets/6dbae378-0320-48f6-b308-060fb7a8e0df)
