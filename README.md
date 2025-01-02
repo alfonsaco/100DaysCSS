@@ -5,8 +5,11 @@
 </div>
 
 <br>
-<p align="center"><b>LINK DEL RETO: </b>https://100dayscss.com/</p>
-<p align="center"><b>MI PERFIL: </b>https://100dayscss.com/progress/alfonsaco/</p>
+<div align="center">
+  <p><b>LINK DEL RETO: </b>https://100dayscss.com/</p>
+  <p><b>MI PERFIL: </b>https://100dayscss.com/progress/alfonsaco/</p>  
+</div>
+
 <br>
 <div align="center">
   <img src="https://github.com/alfonsaco/100DaysCSS/blob/main/100DayCSS.PNG" alt="100DayCSS" />
