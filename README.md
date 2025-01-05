@@ -14,5 +14,3 @@
 <div align="center">
   <img src="https://github.com/alfonsaco/100DaysCSS/blob/main/100DayCSS.PNG" alt="100DayCSS" />
 </div>
-
-[Ver proyecto interactivo en GitHub Pages](https://usuario.github.io/nombre-del-repositorio/)
