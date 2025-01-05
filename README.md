@@ -14,3 +14,6 @@
 <div align="center">
   <img src="https://github.com/alfonsaco/100DaysCSS/blob/main/100DayCSS.PNG" alt="100DayCSS" />
 </div>
+
+# PENS DESTACADOS
+[![Vista previa de CodePen](https://codepen.io/alfonsaco/pen/jOjYyrO/image/large.png)](https://codepen.io/alfonsaco/pen/jOjYyrO)
