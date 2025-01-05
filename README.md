@@ -15,17 +15,4 @@
   <img src="https://github.com/alfonsaco/100DaysCSS/blob/main/100DayCSS.PNG" alt="100DayCSS" />
 </div>
 
-# PENS DESTACADOS
-[![Vista previa de CodePen](https://codepen.io/alfonsaco/pen/jOjYyrO/image/large.png)](https://codepen.io/alfonsaco/pen/jOjYyrO)
-
-```html
-<iframe 
-  height="300" 
-  style="width: 100%;" 
-  scrolling="no" 
-  title="CodePen" 
-  src="https://codepen.io/alfonsaco/pen/jOjYyrO" 
-  frameborder="no" 
-  allowtransparency="true" 
-  allowfullscreen="true">
-</iframe>
+[Ver proyecto interactivo en GitHub Pages](https://usuario.github.io/nombre-del-repositorio/)
